@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/styles.css" >
+    <!-- <link rel="stylesheet" href="D:\Spoorthi\web dev\blog  post- backend\public\styles.css" > -->
+
+</head>
+<body >
+    
+
+    <%- include('partials/header.ejs') %>.
+
+    <!-- its called layouts
+        and it has to be inside views
+        by doing this, we are adding the header.ejs and footer.ejs which are 
+        linked with styles.css -->
+    
+        <div style="overflow:scroll;
+        height:100%; ">
+            <h1>home</h1>
+    
+            <p><%= toPrint%></p>
+        
+            
+        
+            <% newItems.forEach(function(post){ %>
+                <!-- <h1> <%= post.title%></h1> -->
+                <p> 
+                    <%=  post.body.substring(0,100) + "..."%>
+                    <a href="/newItems/<%=post.title%>">Read more</a>
+                </p>
+        
+            <%});%>
+        
+        
+        </div>
+        
+        <%- include('partials/footer.ejs') %>.
+
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs') %>.
+
+<h1>compose</h1>
+<form action="/compose" method="post">
+    
+    <div class="form-group">
+        <label for="exampleFormControlInput1" class="form-label">title</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" name="postTitle">
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1" class="form-label">body</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="postBody" rows="3"></textarea>
+    </div>
+
+    <button type="submit" name="button" class="btn btn-primary">Publish</button>
+
+</form>
+
+
+
+<!-- button is outside the div but inside the form so that there is a gap between the textboxes and 
+the button because dic groups the whole form tightly-->
+
+<!-- use textarea instead of input for a multi line text box. also button type should be submit else it doesnt 
+return the value. this code is from bootstrap which is changed according to our needs -->
+
+<%- include('partials/footer.ejs') %>.
